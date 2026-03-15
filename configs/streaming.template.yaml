@@ -1,0 +1,20 @@
+project:
+  name: campus-building-a
+  stage: streaming
+
+input:
+  space_manifest_path: data/processed/spaces/building-a-spaces.json
+  space_asset_dir: data/processed/spaces/building-a/
+
+runtime:
+  max_loaded_spaces: 4
+  preload_neighbor_spaces: true
+  frustum_margin_deg: 15.0
+  memory_budget_mb: 6144
+
+camera:
+  pose_source: replay
+  pose_log_path: data/raw/metadata/building-a-camera-path.json
+
+output:
+  metrics_path: data/exports/streaming-metrics/building-a.json
