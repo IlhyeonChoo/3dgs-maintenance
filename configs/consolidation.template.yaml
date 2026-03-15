@@ -1,0 +1,21 @@
+project:
+  name: campus-building-a
+  stage: consolidation
+
+input:
+  block_asset_dir: data/processed/blocks/building-a/
+  block_manifest_path: data/interim/partitions/building-a-blocks.json
+
+space:
+  grouping_strategy: adjacency
+  target_blocks_per_space: 3
+  overlap_ratio: 0.15
+
+optimization:
+  enable_pruning: true
+  enable_lod: true
+  spatial_index: octree
+
+output:
+  space_manifest_path: data/processed/spaces/building-a-spaces.json
+  space_asset_dir: data/processed/spaces/building-a/

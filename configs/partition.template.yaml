@@ -1,0 +1,18 @@
+project:
+  name: campus-building-a
+  stage: partition
+
+input:
+  floorplan_path: data/raw/floorplans/building-a.pdf
+  image_root: data/raw/images/building-a/
+  metadata_path: data/raw/metadata/building-a.json
+
+partition:
+  strategy: structural
+  overlap_ratio: 0.10
+  min_block_area_m2: 15.0
+  manual_seed_manifest: null
+
+output:
+  block_manifest_path: data/interim/partitions/building-a-blocks.json
+  preview_dir: data/exports/partition-preview/building-a/

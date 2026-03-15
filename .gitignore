@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Large artifacts and experiment outputs
+artifacts/
+outputs/
+logs/
+wandb/
+checkpoints/
+colmap/
+*.pt
+*.pth
+*.ckpt
+*.npz
+*.npy
+*.ply
+*.onnx
+
+# Data directory: keep only the tracked scaffold
+data/**
+!data/
+!data/README.md
+!data/raw/
+!data/raw/.gitkeep
+!data/interim/
+!data/interim/.gitkeep
+!data/processed/
+!data/processed/.gitkeep
+!data/exports/
+!data/exports/.gitkeep

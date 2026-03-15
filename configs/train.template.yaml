@@ -1,0 +1,21 @@
+project:
+  name: campus-building-a
+  stage: train
+
+input:
+  block_manifest_path: data/interim/partitions/building-a-blocks.json
+  image_root: data/raw/images/building-a/
+
+sfm:
+  tool: colmap
+  camera_model: OPENCV
+  global_alignment: pending
+
+training:
+  backend: 3dgs
+  iterations: 30000
+  resolution_scale: 1.0
+  save_every: 5000
+
+output:
+  block_output_dir: data/processed/blocks/building-a/
